@@ -7,17 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21C455E1DF4845800ADFF50 /* ScreenFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C455D1DF4845800ADFF50 /* ScreenFlow.swift */; };
+		F21C45601DF4846B00ADFF50 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C455F1DF4846B00ADFF50 /* Screen.swift */; };
+		F21C45621DF48D6900ADFF50 /* ScreenOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */; };
+		F21C45641DF48D7700ADFF50 /* ScreenTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45631DF48D7700ADFF50 /* ScreenTwoViewController.swift */; };
+		F21C45661DF4907400ADFF50 /* ScreenFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */; };
+		F21C45681DF498D200ADFF50 /* ScreenFlowManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45671DF498D200ADFF50 /* ScreenFlowManagerTests.swift */; };
+		F21C456B1DF49A1E00ADFF50 /* ScreenFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45691DF4998900ADFF50 /* ScreenFlowManager.swift */; };
+		F21C456E1DF49F5F00ADFF50 /* ScreenFlowKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D20681DF41EC30032B8D6 /* ScreenFlowKit.framework */; };
 		F22D206D1DF41EC30032B8D6 /* ScreenFlowKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F22D206B1DF41EC30032B8D6 /* ScreenFlowKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F22D20781DF41F150032B8D6 /* ScreenFlowKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D20771DF41F150032B8D6 /* ScreenFlowKitTests.swift */; };
 		F22D207A1DF41F150032B8D6 /* ScreenFlowKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D20681DF41EC30032B8D6 /* ScreenFlowKit.framework */; };
 		F22D20871DF41F3A0032B8D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D20861DF41F3A0032B8D6 /* AppDelegate.swift */; };
-		F22D20891DF41F3A0032B8D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D20881DF41F3A0032B8D6 /* ViewController.swift */; };
+		F22D20891DF41F3A0032B8D6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D20881DF41F3A0032B8D6 /* StartViewController.swift */; };
 		F22D208C1DF41F3A0032B8D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22D208A1DF41F3A0032B8D6 /* Main.storyboard */; };
 		F22D208E1DF41F3A0032B8D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22D208D1DF41F3A0032B8D6 /* Assets.xcassets */; };
 		F22D20911DF41F3A0032B8D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22D208F1DF41F3A0032B8D6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F21C456C1DF49F3300ADFF50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22D205B1DF41BA10032B8D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22D20671DF41EC30032B8D6;
+			remoteInfo = ScreenFlowKit;
+		};
 		F22D207B1DF41F150032B8D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F22D205B1DF41BA10032B8D6 /* Project object */;
@@ -28,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F21C455D1DF4845800ADFF50 /* ScreenFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFlow.swift; sourceTree = "<group>"; };
+		F21C455F1DF4846B00ADFF50 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOneViewController.swift; sourceTree = "<group>"; };
+		F21C45631DF48D7700ADFF50 /* ScreenTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTwoViewController.swift; sourceTree = "<group>"; };
+		F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFlowTests.swift; sourceTree = "<group>"; };
+		F21C45671DF498D200ADFF50 /* ScreenFlowManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFlowManagerTests.swift; sourceTree = "<group>"; };
+		F21C45691DF4998900ADFF50 /* ScreenFlowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFlowManager.swift; sourceTree = "<group>"; };
 		F22D20681DF41EC30032B8D6 /* ScreenFlowKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScreenFlowKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22D206B1DF41EC30032B8D6 /* ScreenFlowKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenFlowKit.h; sourceTree = "<group>"; };
 		F22D206C1DF41EC30032B8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,7 +58,7 @@
 		F22D20791DF41F150032B8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F22D20841DF41F3A0032B8D6 /* ScreenFlowKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenFlowKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22D20861DF41F3A0032B8D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F22D20881DF41F3A0032B8D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F22D20881DF41F3A0032B8D6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		F22D208B1DF41F3A0032B8D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F22D208D1DF41F3A0032B8D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F22D20901DF41F3A0032B8D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21C456E1DF49F5F00ADFF50 /* ScreenFlowKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +107,9 @@
 		F22D20611DF41C100032B8D6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F21C455D1DF4845800ADFF50 /* ScreenFlow.swift */,
+				F21C455F1DF4846B00ADFF50 /* Screen.swift */,
+				F21C45691DF4998900ADFF50 /* ScreenFlowManager.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -91,6 +117,8 @@
 		F22D20621DF41C270032B8D6 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */,
+				F21C45671DF498D200ADFF50 /* ScreenFlowManagerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -127,7 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				F22D20861DF41F3A0032B8D6 /* AppDelegate.swift */,
-				F22D20881DF41F3A0032B8D6 /* ViewController.swift */,
+				F22D20881DF41F3A0032B8D6 /* StartViewController.swift */,
+				F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */,
+				F21C45631DF48D7700ADFF50 /* ScreenTwoViewController.swift */,
 				F22D208A1DF41F3A0032B8D6 /* Main.storyboard */,
 				F22D208D1DF41F3A0032B8D6 /* Assets.xcassets */,
 				F22D208F1DF41F3A0032B8D6 /* LaunchScreen.storyboard */,
@@ -197,6 +227,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F21C456D1DF49F3300ADFF50 /* PBXTargetDependency */,
 			);
 			name = ScreenFlowKitExample;
 			productName = ScreenFlowKitExample;
@@ -215,6 +246,7 @@
 					F22D20671DF41EC30032B8D6 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = YZB6HYGFR3;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					F22D20741DF41F150032B8D6 = {
@@ -281,6 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21C455E1DF4845800ADFF50 /* ScreenFlow.swift in Sources */,
+				F21C456B1DF49A1E00ADFF50 /* ScreenFlowManager.swift in Sources */,
+				F21C45601DF4846B00ADFF50 /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +323,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21C45681DF498D200ADFF50 /* ScreenFlowManagerTests.swift in Sources */,
 				F22D20781DF41F150032B8D6 /* ScreenFlowKitTests.swift in Sources */,
+				F21C45661DF4907400ADFF50 /* ScreenFlowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +333,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22D20891DF41F3A0032B8D6 /* ViewController.swift in Sources */,
+				F22D20891DF41F3A0032B8D6 /* StartViewController.swift in Sources */,
+				F21C45641DF48D7700ADFF50 /* ScreenTwoViewController.swift in Sources */,
 				F22D20871DF41F3A0032B8D6 /* AppDelegate.swift in Sources */,
+				F21C45621DF48D6900ADFF50 /* ScreenOneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F21C456D1DF49F3300ADFF50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22D20671DF41EC30032B8D6 /* ScreenFlowKit */;
+			targetProxy = F21C456C1DF49F3300ADFF50 /* PBXContainerItemProxy */;
+		};
 		F22D207C1DF41F150032B8D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F22D20671DF41EC30032B8D6 /* ScreenFlowKit */;
@@ -471,6 +515,7 @@
 		F22D207E1DF41F150032B8D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -526,6 +571,7 @@
 		F22D207F1DF41F150032B8D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
