@@ -695,6 +695,7 @@
 				F22D20701DF41EC30032B8D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F22D207D1DF41F150032B8D6 /* Build configuration list for PBXNativeTarget "ScreenFlowKitTests" */ = {
 			isa = XCConfigurationList;
@@ -703,6 +704,7 @@
 				F22D207F1DF41F150032B8D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F22D20931DF41F3A0032B8D6 /* Build configuration list for PBXNativeTarget "ScreenFlowKitExample" */ = {
 			isa = XCConfigurationList;
@@ -711,6 +713,7 @@
 				F22D20951DF41F3A0032B8D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
