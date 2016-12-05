@@ -26,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F2196AED1DF5E99C00F195CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22D205B1DF41BA10032B8D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22D20831DF41F3A0032B8D6;
+			remoteInfo = ScreenFlowKitExample;
+		};
 		F21C456C1DF49F3300ADFF50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F22D205B1DF41BA10032B8D6 /* Project object */;
@@ -210,6 +217,7 @@
 			);
 			dependencies = (
 				F22D207C1DF41F150032B8D6 /* PBXTargetDependency */,
+				F2196AEE1DF5E99C00F195CA /* PBXTargetDependency */,
 			);
 			name = ScreenFlowKitTests;
 			productName = ScreenFlowKitTests;
@@ -253,6 +261,7 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = YZB6HYGFR3;
 						ProvisioningStyle = Automatic;
+						TestTargetID = F22D20831DF41F3A0032B8D6;
 					};
 					F22D20831DF41F3A0032B8D6 = {
 						CreatedOnToolsVersion = 8.1;
@@ -343,6 +352,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F2196AEE1DF5E99C00F195CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22D20831DF41F3A0032B8D6 /* ScreenFlowKitExample */;
+			targetProxy = F2196AED1DF5E99C00F195CA /* PBXContainerItemProxy */;
+		};
 		F21C456D1DF49F3300ADFF50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F22D20671DF41EC30032B8D6 /* ScreenFlowKit */;
@@ -565,6 +579,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenFlowKitExample.app/ScreenFlowKitExample";
 			};
 			name = Debug;
 		};
@@ -613,6 +628,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenFlowKitExample.app/ScreenFlowKitExample";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

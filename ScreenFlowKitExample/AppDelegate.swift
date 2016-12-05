@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   fileprivate func initScreenFlow() {
-    setupScreenFlow(for: self.window!)
     let flow = ScreenFlow(name: "TestFlow")
       .add(element: Screen<StartViewController>(name: "Start"))
       .add(element: Screen<ScreenOneViewController>(name: "Screen1"))

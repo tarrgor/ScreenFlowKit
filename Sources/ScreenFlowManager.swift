@@ -15,6 +15,22 @@ public class ScreenFlowManager {
   fileprivate var _window: UIWindow?
   fileprivate var _flows: [String:ScreenFlow] = [:]
   
+  /// The application window must be known to the ScreenFlowManager. If it is not set
+  /// in code by your app, ScreenFlowManager can guess it by trying to get the first
+  /// window registered with UIApplication
+  public var window: UIWindow {
+    get {
+      if let win = self._window { return win }
+      let guessedWindow = UIApplication.shared.windows.first
+      assert(guessedWindow != nil, "No application window configured for ScreenFlowManager")
+      self._window = guessedWindow
+      return guessedWindow!
+    }
+    set {
+      self._window = newValue
+    }
+  }
+  
   fileprivate init() {
   }
   
@@ -27,12 +43,8 @@ public class ScreenFlowManager {
       return self._flows[name]
     }
   }
+  
 }
 
-public extension UIApplicationDelegate {
-  public func setupScreenFlow(for window: UIWindow) {
-    ScreenFlowManager.shared._window = window
-  }
-}
 
 

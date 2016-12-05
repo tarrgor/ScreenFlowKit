@@ -23,4 +23,15 @@ class ScreenFlowManagerTests: XCTestCase {
   
     XCTAssertNotNil(manager["TestFlow"])
   }
+  
+  func testScreenFlowManager_WindowIsSetByGuess() {
+    XCTAssertNotNil(ScreenFlowManager.shared.window)
+  }
+  
+  func testScreenFlowManager_WindowIsSetManually() {
+    let window = UIWindow()
+    ScreenFlowManager.shared.window = window
+    XCTAssert(ScreenFlowManager.shared.window == window)
+  }
+  
 }
