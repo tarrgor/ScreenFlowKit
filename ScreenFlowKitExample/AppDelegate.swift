@@ -22,10 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   fileprivate func initScreenFlow() {
     let flow = ScreenFlow(name: "TestFlow")
-      .add(element: Screen<StartViewController>(name: "Start"))
+      .add(element: Screen<StartViewController>(name: "Start"), initialScreen: true)
       .add(element: Screen<ScreenOneViewController>(name: "Screen1"))
       .add(element: Screen<ScreenTwoViewController>(name: "Screen2"))
     ScreenFlowManager.shared.register(flow: flow)
+    ScreenFlowManager.shared.start(flow: "TestFlow")
   }
 
 }

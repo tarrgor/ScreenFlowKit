@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21C2E1B1DF73BC000A42D1B /* ScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C2E1A1DF73BC000A42D1B /* ScreenTest.swift */; };
 		F21C455E1DF4845800ADFF50 /* ScreenFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C455D1DF4845800ADFF50 /* ScreenFlow.swift */; };
 		F21C45601DF4846B00ADFF50 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C455F1DF4846B00ADFF50 /* Screen.swift */; };
 		F21C45621DF48D6900ADFF50 /* ScreenOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F21C2E1A1DF73BC000A42D1B /* ScreenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTest.swift; sourceTree = "<group>"; };
 		F21C455D1DF4845800ADFF50 /* ScreenFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFlow.swift; sourceTree = "<group>"; };
 		F21C455F1DF4846B00ADFF50 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOneViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */,
 				F21C45671DF498D200ADFF50 /* ScreenFlowManagerTests.swift */,
+				F21C2E1A1DF73BC000A42D1B /* ScreenTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				F21C45681DF498D200ADFF50 /* ScreenFlowManagerTests.swift in Sources */,
 				F22D20781DF41F150032B8D6 /* ScreenFlowKitTests.swift in Sources */,
 				F21C45661DF4907400ADFF50 /* ScreenFlowTests.swift in Sources */,
+				F21C2E1B1DF73BC000A42D1B /* ScreenTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

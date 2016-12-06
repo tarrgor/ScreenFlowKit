@@ -34,4 +34,22 @@ class ScreenFlowManagerTests: XCTestCase {
     XCTAssert(ScreenFlowManager.shared.window == window)
   }
   
+  func testStartAFlow_FirstScreenShouldDisplay() {
+    let manager = ScreenFlowManager.shared
+    let flow = ScreenFlow(name: "TestFlow")
+      .add(element: Screen<UIViewController>(name: "Start"), initialScreen: true)
+      .add(element: Screen<UIViewController>(name: "Second"))
+    
+    manager.register(flow: flow)
+    manager.start(flow: "TestFlow")
+    
+    XCTAssertNotNil(manager.window.rootViewController)
+    XCTAssert(manager.window.rootViewController is UINavigationController)
+    
+    let navController = manager.window.rootViewController as! UINavigationController
+    XCTAssertNotNil(navController.visibleViewController)
+  }
 }
+
+
+

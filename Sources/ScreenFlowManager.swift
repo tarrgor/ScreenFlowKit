@@ -13,6 +13,7 @@ public class ScreenFlowManager {
   public static let shared = ScreenFlowManager()
   
   fileprivate var _window: UIWindow?
+  fileprivate var _navController: UINavigationController?
   fileprivate var _flows: [String:ScreenFlow] = [:]
   
   /// The application window must be known to the ScreenFlowManager. If it is not set
@@ -28,7 +29,12 @@ public class ScreenFlowManager {
     }
     set {
       self._window = newValue
+      self._navController = nil
     }
+  }
+  
+  var navigationController: UINavigationController? {
+    return self._navController
   }
   
   fileprivate init() {
@@ -41,6 +47,20 @@ public class ScreenFlowManager {
   public subscript(name: String) -> ScreenFlow? {
     get {
       return self._flows[name]
+    }
+  }
+  
+  public func start(flow name: String) {
+    if (self._navController == nil) {
+      self._navController = UINavigationController()
+      self.window.rootViewController = self._navController
+    }
+    if let flow = self._flows[name] {
+      do {
+        try flow.run()
+      } catch {
+        print(error)
+      }
     }
   }
   
