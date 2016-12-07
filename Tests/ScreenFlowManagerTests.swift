@@ -16,8 +16,8 @@ class ScreenFlowManagerTests: XCTestCase {
   }
   
   func testRegisterScreenFlowWithManager_FlowIsRegistered() {
-    let manager = ScreenFlowManager.shared
-    let flow = ScreenFlow(name: "TestFlow")
+    let manager = FlowManager.shared
+    let flow = Flow(name: "TestFlow")
   
     manager.register(flow: flow)
   
@@ -25,20 +25,20 @@ class ScreenFlowManagerTests: XCTestCase {
   }
   
   func testScreenFlowManager_WindowIsSetByGuess() {
-    XCTAssertNotNil(ScreenFlowManager.shared.window)
+    XCTAssertNotNil(FlowManager.shared.window)
   }
   
   func testScreenFlowManager_WindowIsSetManually() {
     let window = UIWindow()
-    ScreenFlowManager.shared.window = window
-    XCTAssert(ScreenFlowManager.shared.window == window)
+    FlowManager.shared.window = window
+    XCTAssert(FlowManager.shared.window == window)
   }
   
   func testStartAFlow_FirstScreenShouldDisplay() {
-    let manager = ScreenFlowManager.shared
-    let flow = ScreenFlow(name: "TestFlow")
-      .add(element: Screen<UIViewController>(name: "Start"), initialScreen: true)
-      .add(element: Screen<UIViewController>(name: "Second"))
+    let manager = FlowManager.shared
+    let flow = Flow(name: "TestFlow")
+      .add(element: ScreenFromCode<UIViewController>(screenId: "Start"), initialScreen: true)
+      .add(element: ScreenFromCode<UIViewController>(screenId: "Second"))
     
     manager.register(flow: flow)
     manager.start(flow: "TestFlow")

@@ -11,12 +11,12 @@ import XCTest
 
 class ScreenFlowTests: XCTestCase {
   
-  var flow: ScreenFlow!
+  var flow: Flow!
   
   override func setUp() {
     super.setUp()
 
-    self.flow = ScreenFlow(name: "TestFlow")
+    self.flow = Flow(name: "TestFlow")
   }
 
   func testCreateScreenFlow_NameIsSetCorrectly() {
@@ -24,9 +24,9 @@ class ScreenFlowTests: XCTestCase {
   }
   
   func testCreateScreenFlow_ScreenCanBeAccessedBySubscript() {
-    _ = flow.add(element: Screen<UIViewController>(name: "TestScreen"))
+    _ = flow.add(element: ScreenFromCode<UIViewController>(screenId: "TestScreen"))
     
     XCTAssertNotNil(flow["TestScreen"])
-    XCTAssertEqual(flow["TestScreen"]!.name, "TestScreen")
+    XCTAssertEqual(flow["TestScreen"]!.screenId, "TestScreen")
   }
 }

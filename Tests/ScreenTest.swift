@@ -16,7 +16,7 @@ class ScreenTest: XCTestCase {
   }
   
   func testLoadAScreen() {
-    let screen = Screen<UIViewController>(name: "TestScreen")
+    let screen = ScreenFromCode<UIViewController>(screenId: "TestScreen")
     let vc = screen.load()
     
     XCTAssert(vc is UIViewController)

@@ -8,31 +8,31 @@
 
 import Foundation
 
-public enum ScreenFlowError: Error {
+public enum FlowError: Error {
   case startScreenNotInFlow
   case noStartScreenDefined
   case noNavigationControllerInScreenFlowManager
 }
 
-public class ScreenFlow {
+public class Flow {
   public let name: String
   
-  fileprivate var _elements: [String:ScreenFlowElement] = [:]
+  fileprivate var _elements: [String:Screen] = [:]
   fileprivate var _startElementName: String?
   
   public init(name: String) {
     self.name = name
   }
   
-  public func add(element: ScreenFlowElement, initialScreen: Bool = false) -> ScreenFlow {
-    self._elements[element.name] = element
+  public func add(element: Screen, initialScreen: Bool = false) -> Flow {
+    self._elements[element.screenId] = element
     if (initialScreen) {
-      self._startElementName = element.name
+      self._startElementName = element.screenId
     }
     return self
   }
   
-  public subscript(name: String) -> ScreenFlowElement? {
+  public subscript(name: String) -> Screen? {
     get {
       return self._elements[name]
     }
@@ -40,13 +40,13 @@ public class ScreenFlow {
   
   func run() throws {
     guard let startElementName = _startElementName else {
-      throw ScreenFlowError.noStartScreenDefined
+      throw FlowError.noStartScreenDefined
     }
     guard let element = _elements[startElementName] else {
-      throw ScreenFlowError.startScreenNotInFlow
+      throw FlowError.startScreenNotInFlow
     }
-    guard let navController = ScreenFlowManager.shared.navigationController else {
-      throw ScreenFlowError.noNavigationControllerInScreenFlowManager
+    guard let navController = FlowManager.shared.navigationController else {
+      throw FlowError.noNavigationControllerInScreenFlowManager
     }
     let vc = element.load()
     navController.setViewControllers([vc], animated: false)

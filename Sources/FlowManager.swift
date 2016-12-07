@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class ScreenFlowManager {
+public class FlowManager {
   
-  public static let shared = ScreenFlowManager()
+  public static let shared = FlowManager()
   
   fileprivate var _window: UIWindow?
   fileprivate var _navController: UINavigationController?
-  fileprivate var _flows: [String:ScreenFlow] = [:]
+  fileprivate var _flows: [String:Flow] = [:]
   
   /// The application window must be known to the ScreenFlowManager. If it is not set
   /// in code by your app, ScreenFlowManager can guess it by trying to get the first
@@ -40,11 +40,11 @@ public class ScreenFlowManager {
   fileprivate init() {
   }
   
-  public func register(flow: ScreenFlow) {
+  public func register(flow: Flow) {
     self._flows[flow.name] = flow
   }
   
-  public subscript(name: String) -> ScreenFlow? {
+  public subscript(name: String) -> Flow? {
     get {
       return self._flows[name]
     }

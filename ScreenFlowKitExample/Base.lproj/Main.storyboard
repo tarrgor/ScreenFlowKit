@@ -12,7 +12,7 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="ScreenFlowKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartViewController" id="BYZ-38-t0r" customClass="StartViewController" customModule="ScreenFlowKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -43,11 +43,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-26" y="59"/>
         </scene>
         <!--Screen One View Controller-->
         <scene sceneID="s7Q-xy-RVk">
             <objects>
-                <viewController id="fEa-8t-1to" customClass="ScreenOneViewController" customModule="ScreenFlowKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScreenOneViewController" id="fEa-8t-1to" customClass="ScreenOneViewController" customModule="ScreenFlowKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KWd-0L-Kra"/>
                         <viewControllerLayoutGuide type="bottom" id="6Mk-HL-ZME"/>
@@ -83,7 +84,7 @@
         <!--Screen Two View Controller-->
         <scene sceneID="zlb-q4-InX">
             <objects>
-                <viewController id="41Q-Ip-2aT" customClass="ScreenTwoViewController" customModule="ScreenFlowKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScreenTwoViewController" id="41Q-Ip-2aT" customClass="ScreenTwoViewController" customModule="ScreenFlowKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IVb-TL-K3l"/>
                         <viewControllerLayoutGuide type="bottom" id="Oi2-Vl-nfp"/>
