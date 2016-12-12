@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   fileprivate func initScreenFlow() {
     let flow = Flow(name: "TestFlow")
-      .add(element: ScreenFromStoryboard<StartViewController>(screenId: "Start", storyboard: "Main", identifier: "StartViewController"), initialScreen: true)
-      .add(element: ScreenFromStoryboard<ScreenOneViewController>(screenId: "Screen1", storyboard: "Main", identifier: "ScreenOneViewController"))
-      .add(element: ScreenFromStoryboard<ScreenTwoViewController>(screenId: "Screen2", storyboard: "Main", identifier: "ScreenTwoViewController"))
+      .add(screen: ScreenFromStoryboard<StartViewController>(screenId: "Start", storyboard: "Main", identifier: "StartViewController"), initial: true)
+      .add(screen: ScreenFromStoryboard<ScreenOneViewController>(screenId: "Screen1", storyboard: "Main", identifier: "ScreenOneViewController"))
+      .add(screen: ScreenFromStoryboard<ScreenTwoViewController>(screenId: "Screen2", storyboard: "Main", identifier: "ScreenTwoViewController"))
     FlowManager.shared.register(flow: flow)
     FlowManager.shared.start(flow: "TestFlow")
   }

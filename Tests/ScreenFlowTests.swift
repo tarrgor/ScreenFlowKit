@@ -24,7 +24,7 @@ class ScreenFlowTests: XCTestCase {
   }
   
   func testCreateScreenFlow_ScreenCanBeAccessedBySubscript() {
-    _ = flow.add(element: ScreenFromCode<UIViewController>(screenId: "TestScreen"))
+    _ = flow.add(screen: ScreenFromCode<UIViewController>(screenId: "TestScreen"))
     
     XCTAssertNotNil(flow["TestScreen"])
     XCTAssertEqual(flow["TestScreen"]!.screenId, "TestScreen")

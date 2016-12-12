@@ -13,11 +13,10 @@
 		F21C45621DF48D6900ADFF50 /* ScreenOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */; };
 		F21C45641DF48D7700ADFF50 /* ScreenTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45631DF48D7700ADFF50 /* ScreenTwoViewController.swift */; };
 		F21C45661DF4907400ADFF50 /* ScreenFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */; };
-		F21C45681DF498D200ADFF50 /* ScreenFlowManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45671DF498D200ADFF50 /* ScreenFlowManagerTests.swift */; };
+		F21C45681DF498D200ADFF50 /* FlowManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45671DF498D200ADFF50 /* FlowManagerTests.swift */; };
 		F21C456B1DF49A1E00ADFF50 /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45691DF4998900ADFF50 /* FlowManager.swift */; };
 		F21C456E1DF49F5F00ADFF50 /* ScreenFlowKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D20681DF41EC30032B8D6 /* ScreenFlowKit.framework */; };
 		F22D206D1DF41EC30032B8D6 /* ScreenFlowKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F22D206B1DF41EC30032B8D6 /* ScreenFlowKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F22D20781DF41F150032B8D6 /* ScreenFlowKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D20771DF41F150032B8D6 /* ScreenFlowKitTests.swift */; };
 		F22D207A1DF41F150032B8D6 /* ScreenFlowKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D20681DF41EC30032B8D6 /* ScreenFlowKit.framework */; };
 		F22D20871DF41F3A0032B8D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D20861DF41F3A0032B8D6 /* AppDelegate.swift */; };
 		F22D20891DF41F3A0032B8D6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D20881DF41F3A0032B8D6 /* StartViewController.swift */; };
@@ -57,13 +56,12 @@
 		F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOneViewController.swift; sourceTree = "<group>"; };
 		F21C45631DF48D7700ADFF50 /* ScreenTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTwoViewController.swift; sourceTree = "<group>"; };
 		F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFlowTests.swift; sourceTree = "<group>"; };
-		F21C45671DF498D200ADFF50 /* ScreenFlowManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFlowManagerTests.swift; sourceTree = "<group>"; };
+		F21C45671DF498D200ADFF50 /* FlowManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowManagerTests.swift; sourceTree = "<group>"; };
 		F21C45691DF4998900ADFF50 /* FlowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
 		F22D20681DF41EC30032B8D6 /* ScreenFlowKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScreenFlowKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22D206B1DF41EC30032B8D6 /* ScreenFlowKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenFlowKit.h; sourceTree = "<group>"; };
 		F22D206C1DF41EC30032B8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F22D20751DF41F150032B8D6 /* ScreenFlowKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenFlowKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F22D20771DF41F150032B8D6 /* ScreenFlowKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFlowKitTests.swift; sourceTree = "<group>"; };
 		F22D20791DF41F150032B8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F22D20841DF41F3A0032B8D6 /* ScreenFlowKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenFlowKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22D20861DF41F3A0032B8D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */,
-				F21C45671DF498D200ADFF50 /* ScreenFlowManagerTests.swift */,
+				F21C45671DF498D200ADFF50 /* FlowManagerTests.swift */,
 				F21C2E1A1DF73BC000A42D1B /* ScreenTest.swift */,
 			);
 			path = Tests;
@@ -155,7 +153,6 @@
 		F22D20761DF41F150032B8D6 /* ScreenFlowKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				F22D20771DF41F150032B8D6 /* ScreenFlowKitTests.swift */,
 				F22D20791DF41F150032B8D6 /* Info.plist */,
 			);
 			path = ScreenFlowKitTests;
@@ -335,8 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21C45681DF498D200ADFF50 /* ScreenFlowManagerTests.swift in Sources */,
-				F22D20781DF41F150032B8D6 /* ScreenFlowKitTests.swift in Sources */,
+				F21C45681DF498D200ADFF50 /* FlowManagerTests.swift in Sources */,
 				F21C45661DF4907400ADFF50 /* ScreenFlowTests.swift in Sources */,
 				F21C2E1B1DF73BC000A42D1B /* ScreenTest.swift in Sources */,
 			);
