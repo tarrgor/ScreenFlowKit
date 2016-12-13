@@ -16,13 +16,16 @@ public enum Exit {
 public protocol Screen {
   var screenId: String { get }
 
-  func load()
-  func unload()
-
   func show()
+  func exit(name: String, to: Exit) -> Screen
 }
 
-extension Screen {
+protocol _Screen {
+  func load()
+  func unload()
+}
+
+extension _Screen {
   var navigationController: UINavigationController? {
     return FlowManager.shared.navigationController
   }
@@ -30,19 +33,13 @@ extension Screen {
 
 public class BaseScreen: Screen {
   public let screenId: String
+  
+  fileprivate var _exits: [String:Exit] = [:]
 
   var _viewController: UIViewController? = nil
 
   fileprivate init(screenId: String) {
     self.screenId = screenId
-  }
-
-  public func load() {
-    // Dummy implementation does nothing
-  }
-
-  public func unload() {
-    self._viewController = nil
   }
 
   public func show() {
@@ -51,6 +48,19 @@ public class BaseScreen: Screen {
       navController.setViewControllers([viewController], animated: false)
     }
   }
+  
+  public func exit(name: String, to exit: Exit) -> Screen {
+    self._exits[name] = exit
+    return self
+  }
+}
+
+extension BaseScreen: _Screen {
+  @objc func load() { }
+  
+  func unload() {
+    self._viewController = nil
+  }
 }
 
 public class ScreenFromCode<T: UIViewController>: BaseScreen {
@@ -58,7 +68,7 @@ public class ScreenFromCode<T: UIViewController>: BaseScreen {
     super.init(screenId: screenId)
   }
   
-  override public func load() {
+  override func load() {
     self._viewController = T()
   }
 }
@@ -73,7 +83,7 @@ public class ScreenFromStoryboard<T: UIViewController>: BaseScreen {
     super.init(screenId: screenId)
   }
 
-  override public func load() {
+  override func load() {
     let sb = UIStoryboard(name: self.storyboard, bundle: nil)
     self._viewController = sb.instantiateViewController(withIdentifier: self.identifier) as! T
   }

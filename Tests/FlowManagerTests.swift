@@ -65,7 +65,7 @@ class FlowManagerTests: XCTestCase {
 
     let navController = manager.window.rootViewController as! UINavigationController
     XCTAssertNotNil(navController.visibleViewController)
-    XCTAssert(navController.visibleViewController is Mock1ViewController)
+    XCTAssert(navController.visibleViewController is Mock1ViewController)    
   }
 }
 
