@@ -15,7 +15,8 @@ public class FlowManager {
   fileprivate var _window: UIWindow?
   fileprivate var _navController: UINavigationController?
   fileprivate var _flows: [String:Flow] = [:]
-  
+  fileprivate var _currentFlow: Flow?
+
   /// The application window must be known to the ScreenFlowManager. If it is not set
   /// in code by your app, ScreenFlowManager can guess it by trying to get the first
   /// window registered with UIApplication
@@ -58,12 +59,29 @@ public class FlowManager {
     if let flow = self._flows[name] {
       do {
         try flow.run()
+        self._currentFlow = flow
       } catch {
-        print(error)
+        self._currentFlow = nil
       }
     }
   }
-  
+
+  public func proceed(with exitId: String) {
+    guard let flow = self._currentFlow else { return }
+
+    do {
+      try flow.proceed(with: exitId)
+    } catch {
+      print(error)
+    }
+  }
+
+  public func printDebugInfo() {
+    print("Current flow: \(self._currentFlow?.name ?? "None")")
+    print("Current screen: \(self._currentFlow?.currentScreen?.screenId ?? "None")")
+    print("NavController: \(self._navController?.debugDescription ?? "None")")
+    print("Visible ViewController: \(self.navigationController?.visibleViewController?.debugDescription ?? "None")")
+  }
 }
 
 

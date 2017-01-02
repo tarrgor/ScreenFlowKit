@@ -16,8 +16,10 @@ public enum Exit {
 public protocol Screen {
   var screenId: String { get }
 
-  func show()
+  func show(initial: Bool)
   func exit(name: String, to: Exit) -> Screen
+
+  subscript(name: String) -> Exit? { get }
 }
 
 protocol _Screen {
@@ -42,16 +44,26 @@ public class BaseScreen: Screen {
     self.screenId = screenId
   }
 
-  public func show() {
+  public func show(initial: Bool) {
     self.load()
     if let navController = self.navigationController, let viewController = self._viewController {
-      navController.setViewControllers([viewController], animated: false)
+      if initial {
+        navController.setViewControllers([viewController], animated: false)
+      } else {
+        navController.pushViewController(viewController, animated: true)
+      }
     }
   }
-  
+
   public func exit(name: String, to exit: Exit) -> Screen {
     self._exits[name] = exit
     return self
+  }
+
+  public subscript(name: String) -> Exit? {
+    get {
+      return self._exits[name]
+    }
   }
 }
 
@@ -88,4 +100,3 @@ public class ScreenFromStoryboard<T: UIViewController>: BaseScreen {
     self._viewController = sb.instantiateViewController(withIdentifier: self.identifier) as! T
   }
 }
-
