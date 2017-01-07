@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F21C2E1B1DF73BC000A42D1B /* ScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C2E1A1DF73BC000A42D1B /* ScreenTest.swift */; };
+		741942E3745B7E1B64CAA8AB /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741940220C61570F671EB2FF /* Stack.swift */; };
+		7419460BFF30D1A66816D9EB /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741948896230029C443F3489 /* NavigationControllerDelegate.swift */; };
+		74194C53AFCB2EF1EDBF6F3A /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74194385C4D2B35E1AD5CF59 /* StackTests.swift */; };
+		74194D0285FF7547461D96F6 /* UIViewController_ScreenFlowKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74194BEAF868BEAA14D7CB56 /* UIViewController_ScreenFlowKit.swift */; };
 		F21C455E1DF4845800ADFF50 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C455D1DF4845800ADFF50 /* Flow.swift */; };
 		F21C45601DF4846B00ADFF50 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C455F1DF4846B00ADFF50 /* Screen.swift */; };
 		F21C45621DF48D6900ADFF50 /* ScreenOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */; };
 		F21C45641DF48D7700ADFF50 /* ScreenTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45631DF48D7700ADFF50 /* ScreenTwoViewController.swift */; };
-		F21C45661DF4907400ADFF50 /* ScreenFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */; };
 		F21C45681DF498D200ADFF50 /* FlowManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45671DF498D200ADFF50 /* FlowManagerTests.swift */; };
 		F21C456B1DF49A1E00ADFF50 /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C45691DF4998900ADFF50 /* FlowManager.swift */; };
 		F21C456E1DF49F5F00ADFF50 /* ScreenFlowKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D20681DF41EC30032B8D6 /* ScreenFlowKit.framework */; };
@@ -50,12 +52,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F21C2E1A1DF73BC000A42D1B /* ScreenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTest.swift; sourceTree = "<group>"; };
+		741940220C61570F671EB2FF /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		74194385C4D2B35E1AD5CF59 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
+		741948896230029C443F3489 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		74194BEAF868BEAA14D7CB56 /* UIViewController_ScreenFlowKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController_ScreenFlowKit.swift; sourceTree = "<group>"; };
 		F21C455D1DF4845800ADFF50 /* Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		F21C455F1DF4846B00ADFF50 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		F21C45611DF48D6900ADFF50 /* ScreenOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOneViewController.swift; sourceTree = "<group>"; };
 		F21C45631DF48D7700ADFF50 /* ScreenTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTwoViewController.swift; sourceTree = "<group>"; };
-		F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFlowTests.swift; sourceTree = "<group>"; };
 		F21C45671DF498D200ADFF50 /* FlowManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowManagerTests.swift; sourceTree = "<group>"; };
 		F21C45691DF4998900ADFF50 /* FlowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
 		F22D20681DF41EC30032B8D6 /* ScreenFlowKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScreenFlowKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74194C2D6AFF4A52DBC92B4D /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				741940220C61570F671EB2FF /* Stack.swift */,
+			);
+			path = Toolbox;
+			sourceTree = "<group>";
+		};
 		F22D205A1DF41BA10032B8D6 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +129,9 @@
 				F21C455D1DF4845800ADFF50 /* Flow.swift */,
 				F21C455F1DF4846B00ADFF50 /* Screen.swift */,
 				F21C45691DF4998900ADFF50 /* FlowManager.swift */,
+				741948896230029C443F3489 /* NavigationControllerDelegate.swift */,
+				74194BEAF868BEAA14D7CB56 /* UIViewController_ScreenFlowKit.swift */,
+				74194C2D6AFF4A52DBC92B4D /* Toolbox */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -124,9 +139,8 @@
 		F22D20621DF41C270032B8D6 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F21C45651DF4907400ADFF50 /* ScreenFlowTests.swift */,
 				F21C45671DF498D200ADFF50 /* FlowManagerTests.swift */,
-				F21C2E1A1DF73BC000A42D1B /* ScreenTest.swift */,
+				74194385C4D2B35E1AD5CF59 /* StackTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -325,6 +339,9 @@
 				F21C455E1DF4845800ADFF50 /* Flow.swift in Sources */,
 				F21C456B1DF49A1E00ADFF50 /* FlowManager.swift in Sources */,
 				F21C45601DF4846B00ADFF50 /* Screen.swift in Sources */,
+				7419460BFF30D1A66816D9EB /* NavigationControllerDelegate.swift in Sources */,
+				74194D0285FF7547461D96F6 /* UIViewController_ScreenFlowKit.swift in Sources */,
+				741942E3745B7E1B64CAA8AB /* Stack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,8 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21C45681DF498D200ADFF50 /* FlowManagerTests.swift in Sources */,
-				F21C45661DF4907400ADFF50 /* ScreenFlowTests.swift in Sources */,
-				F21C2E1B1DF73BC000A42D1B /* ScreenTest.swift in Sources */,
+				74194C53AFCB2EF1EDBF6F3A /* StackTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

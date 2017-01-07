@@ -53,8 +53,7 @@ public class FlowManager {
   
   public func start(flow name: String) {
     if (self._navController == nil) {
-      self._navController = UINavigationController()
-      self.window.rootViewController = self._navController
+      setupNavigationController()
     }
     if let flow = self._flows[name] {
       do {
@@ -82,7 +81,11 @@ public class FlowManager {
     print("NavController: \(self._navController?.debugDescription ?? "None")")
     print("Visible ViewController: \(self.navigationController?.visibleViewController?.debugDescription ?? "None")")
   }
+
+  private func setupNavigationController() {
+    self._navController = UINavigationController()
+    self._navController?.delegate = NavigationControllerDelegate()
+    self.window.rootViewController = self._navController
+  }
 }
-
-
 
