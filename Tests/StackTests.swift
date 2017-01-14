@@ -8,44 +8,55 @@ import XCTest
 
 class StackTests: XCTestCase {
 
-  var stack: Stack<String>?
+  var stack: Stack<String>!
 
   override func setUp() {
     super.setUp()
 
-    stack = [ "Green", "Red", "Black", "White" ]
+    stack = Stack<String>()
   }
 
-  func testPopElementFromStack_ReturnsCorrectElementAndReducesSizeOfStack() {
-
-    let element = stack!.pop()
-
-    XCTAssertNotNil(element)
-    XCTAssertEqual(element!, "White")
-    XCTAssertEqual(stack!.count, 3)
+  func testIsEmpty_ShouldReturnTrueIfNothingIsThere() {
+    XCTAssertTrue(stack.isEmpty)
   }
 
-  func testPushElementOntoStack_LastElementShouldBeEqualToPushedElementAndSizeIncreased() {
+  func testIsEmpty_ShouldReturnFalseAfterAPush() {
+    stack.push("Something")
 
-    stack!.push(element: "Blue")
-
-    XCTAssertEqual(stack!.reversed().first!, "Blue")
-    XCTAssertEqual(stack!.count, 5)
-
-    let element = stack!.pop()
-
-    XCTAssertEqual(element!, "Blue")
-    XCTAssertEqual(stack!.count, 4)
+    XCTAssertFalse(stack.isEmpty)
   }
 
-  func testPopFromEmptyStack_ShouldReturnNil() {
-    stack = [ "Blue" ]
+  func testCount_ShouldBeZeroAtStart() {
+    XCTAssert(stack.count == 0)
+  }
 
-    let element = stack!.pop()
-    XCTAssertEqual(element!, "Blue")
-    XCTAssertEqual(stack!.count, 0)
+  func testCount_ShouldBeTwoAfterPushingTwoTimes() {
+    stack.push("First")
+    stack.push("Second")
 
-    let expectToBeNil = stack!.pop()
-    XCTAssertNil(expectToBeNil)
+    XCTAssert(stack.count == 2)
+  }
+
+  func testPushAndPeek_CorrectElementShouldBeOnTop() {
+    stack.push("First")
+    stack.push("Second")
+
+    XCTAssert(stack.peek() == "Second")
+  }
+
+  func testPushAndPop_CorrectElementShouldBeOnTop() {
+    stack.push("First")
+    stack.push("Second")
+
+    XCTAssert(stack.pop() == "Second")
+    XCTAssert(stack.peek() == "First")
+  }
+
+  func testClear_StackShouldBeEmpty() {
+    stack.push("First")
+    stack.push("Second")
+    stack.clear()
+
+    XCTAssertTrue(stack.isEmpty)
   }
 }

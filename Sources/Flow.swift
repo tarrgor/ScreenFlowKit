@@ -41,6 +41,7 @@ public class Flow {
   fileprivate var _startScreen: Screen? = nil
   fileprivate var _currentScreen: Screen? = nil
   fileprivate var _state: FlowState = .notRunning
+  fileprivate var _screenStack: Stack<Screen>!
 
   public var state: FlowState {
     return _state
@@ -52,6 +53,7 @@ public class Flow {
 
   public init(name: String) {
     self.name = name
+    self._screenStack = Stack<Screen>()
   }
   
   public func add(screen: Screen, initial: Bool = false) -> Flow {
@@ -77,6 +79,7 @@ public class Flow {
     startScreen.show(initial: true)
     self._currentScreen = startScreen
     self._state = .running
+    self._screenStack.push(startScreen)
   }
 
   func proceed(with id: String) throws {
@@ -87,6 +90,7 @@ public class Flow {
       guard let screen = _screens[screenId] else { throw FlowError.screenNotFound }
       screen.show(initial: false)
       self._currentScreen = screen
+      self._screenStack.push(screen)
     }
   }
 }
