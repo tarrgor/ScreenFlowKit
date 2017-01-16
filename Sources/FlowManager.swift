@@ -17,6 +17,8 @@ public class FlowManager {
   fileprivate var _flows: [String:Flow] = [:]
   fileprivate var _currentFlow: Flow?
 
+  fileprivate var _navControllerDelegate = NavigationControllerDelegate()
+
   /// The application window must be known to the ScreenFlowManager. If it is not set
   /// in code by your app, ScreenFlowManager can guess it by trying to get the first
   /// window registered with UIApplication
@@ -79,13 +81,15 @@ public class FlowManager {
     print("Current flow: \(self._currentFlow?.name ?? "None")")
     print("Current screen: \(self._currentFlow?.currentScreen?.screenId ?? "None")")
     print("NavController: \(self._navController?.debugDescription ?? "None")")
-    print("Visible ViewController: \(self.navigationController?.visibleViewController?.debugDescription ?? "None")")
+    print("Visible ViewController: \(self._navController?.visibleViewController?.debugDescription ?? "None")")
+    print("Delegate: \(self._navController?.delegate)")
   }
 
   private func setupNavigationController() {
     self._navController = UINavigationController()
-    self._navController?.delegate = NavigationControllerDelegate()
+    self._navController?.delegate = self._navControllerDelegate
     self.window.rootViewController = self._navController
+    print("NavController delegate: \(self._navController?.delegate)")
   }
 }
 

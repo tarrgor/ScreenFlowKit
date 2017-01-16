@@ -79,7 +79,6 @@ public class Flow {
     startScreen.show(initial: true)
     self._currentScreen = startScreen
     self._state = .running
-    self._screenStack.push(startScreen)
   }
 
   func proceed(with id: String) throws {
@@ -88,9 +87,20 @@ public class Flow {
 
     if case let .screen(screenId) = exit {
       guard let screen = _screens[screenId] else { throw FlowError.screenNotFound }
+      self._screenStack.push(currentScreen)
       screen.show(initial: false)
       self._currentScreen = screen
-      self._screenStack.push(screen)
     }
+  }
+
+  func goBack() -> Bool {
+    if self._screenStack.isEmpty {
+      print("WARN: No screen on stack, back function not available.")
+      return false
+    }
+
+    self._currentScreen = self._screenStack.pop()
+
+    return true
   }
 }
